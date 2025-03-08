@@ -1,0 +1,91 @@
+/*
+    i raised a ticket 
+    it is gone to a common pool of tickets 
+    then there is also a pool of engineers who will assign it to themseleves 
+    once you have done it - you wait for the doubt raisers confirmatuon\
+    you give thumbs up back to agent and then he clears his view 
+
+    ROLE  OF THE AGENT 
+    Everythig is valid for an admin but not for agents 
+
+    When the admin is oboarding the agents he defines wether he is an L1 agent , L2 agent , L3 agent 
+    L1 assign nahi hua toh L2 assign hua , L3 assign hua 
+
+    Create a provision to add agents and their levels 
+    Too long for admin so give it to someone else . 
+    L1 - > 
+
+    Error logger and an info loger - it is basically a consolel in your system . 
+
+    ADMIN SETUP 
+    AGENTS 
+    TICKET LOGGING 
+    change incident problem request 
+
+    Models and put all the models 
+    Model view controller - models handle all the logic , controller to wwhich logic the control goes and then 
+    there is an entry  point  
+
+    cors is not that reliable so also read about  Read about API gateways 
+    Load balancers 
+
+    If there is something which can be frequently changed 
+    constants 
+    
+    env file banao 
+    
+   beautiful souo and api flask ap 
+
+   difference between parallel programming and concurrent programming 
+    
+   SQS in AWS 
+   step function - credit card database 
+   ECS- 
+   you create an image , a docker file and docker compose file 
+    a running image is a container 
+    Serverless - Lambda function 
+
+    // High end feature - mail aayi , mail se automatically ho gayi ticket create 
+    
+
+    // 4 API - STATUS CHANGE 
+    // Mail se automate 
+    // POC ?? - > 
+    
+
+*/
+
+---------------------------------------------------------------
+Raising a ticket 
+Ticket Creation Flow
+
+✅ Who can raise a ticket?
+	•	Any user (employee, customer, or requester) can create a ticket.
+
+✅ What details should a ticket have?
+	•	Title – Short summary of the issue.
+	•	Description – Detailed explanation of the issue.
+	•	Category – (e.g., IT, HR, Finance, etc.).
+	•	Priority – Default is Low, but can be updated later.
+	•	Status – Default is Open.
+	•	Attachments (Optional) – Files or images related to the issue.
+	•	Created By – User ID of the person raising the ticket.
+	•	Created At – Timestamp of creation.
+
+✅ Where will tickets be stored?
+	•	Tickets will be saved in the Tickets collection in MongoDB.
+
+✅ Who can access the ticket?
+	•	The creator can view their own ticket.
+	•	Agents & Admins can see all tickets.
+
+Next Step → Defining the Ticket Model
+
+Steps for Raising a Ticket:
+	1.	User submits a request (title, description, category, priority).
+	2.	System validates the input (ensures all required fields are present).
+	3.	Ticket is created with status "Open", assigned to no one by default.
+	4.	Response sent back with the ticket details.
+
+---------------------------------------------
+
