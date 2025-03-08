@@ -18,8 +18,10 @@ router.delete('/:companyId/agents', authenticateUser, authorizeRoles('admin'), r
 
 // Admin Ticket Management Routes
 router.get('/:companyId/tickets', authenticateUser, authorizeRoles('admin'), getAdminTickets);
-router.post('/:companyId/assign-ticket', authenticateUser, authorizeRoles('admin'), assignTicketToAgent);
-router.post('/:companyId/change-priority', authenticateUser, authorizeRoles('admin'), changeTicketPriority);
+router.put('/:companyId/tickets/:ticketId/assign', authenticateUser, authorizeRoles('admin'), assignTicketToAgent);
+
+router.put('/:companyId/tickets/:ticketId/update-priority', authenticateUser, authorizeRoles('admin'), changeTicketPriority);
+
 
 module.exports = router;
 
